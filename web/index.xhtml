@@ -1,12 +1,42 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Hello  githup!!!
+        <h:form>
+            Ulke id:<h:inputText value="#{categoryBean.entity.id}"/>
+            <br></br>
+            Ulke isim:<h:inputText value="#{categoryBean.entity.name}"/>
+            <br></br>
+            <h:commandButton action="#{categoryBean.create}" value="Ekle"/>
+        </h:form>
+        <hr/>
+
+        <h:form>
+            <h:dataTable value="#{categoryBean.list}" var="c" border="4">
+                <h:column>
+                    <f:facet name="header">ID</f:facet>
+                        #{c.id}                                                           
+                </h:column>
+                <h:column>
+                    <f:facet name="header">NAME</f:facet>
+                        #{c.name}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">DELETE</f:facet>
+                    <h:commandButton action="#{categoryBean.delete(c)}" value="Sil" />
+                </h:column>
+
+            </h:dataTable>
+
+        </h:form>
+
+
+
     </h:body>
 </html>
 
