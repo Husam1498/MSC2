@@ -8,16 +8,16 @@
     </h:head>
     <h:body>
         <h:form>
-            Ulke id:<h:inputText value="#{categoryBean.entity.id}"/>
+            Ulke id:<h:inputText value="#{countryBean.entity.id}"/>
             <br></br>
-            Ulke isim:<h:inputText value="#{categoryBean.entity.name}"/>
+            Ulke isim:<h:inputText value="#{countryBean.entity.name}"/>
             <br></br>
-            <h:commandButton action="#{categoryBean.create}" value="Ekle"/>
+            <h:commandButton action="#{countryBean.create}" value="Ekle"/>
         </h:form>
         <hr/>
 
         <h:form>
-            <h:dataTable value="#{categoryBean.list}" var="c" border="4">
+            <h:dataTable value="#{countryBean.list}" var="c" border="3">
                 <h:column>
                     <f:facet name="header">ID</f:facet>
                         #{c.id}                                                           
@@ -28,7 +28,7 @@
                 </h:column>
                 <h:column>
                     <f:facet name="header">DELETE</f:facet>
-                    <h:commandButton action="#{categoryBean.delete(c)}" value="Sil" />
+                    <h:commandButton action="#{countryBean.delete(c)}" value="Sil" />
                 </h:column>
 
             </h:dataTable>

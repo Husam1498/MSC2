@@ -4,8 +4,8 @@
  */
 package controller;
 
-import dao.CatgoryDAO;
-import entity.Category;
+import dao.CountryDAO;
+import entity.Country;
 import jakarta.inject.Named;
 import jakarta.enterprise.context.SessionScoped;
 import java.io.Serializable;
@@ -15,53 +15,53 @@ import java.util.List;
  *
  * @author husam
  */
-@Named(value = "categoryBean")
+@Named(value = "countryBean")
 @SessionScoped
-public class CategoryBean implements Serializable {
+public class CountryBean implements Serializable {
 
-    private Category entity;
-    private CatgoryDAO dao;
-    private List<Category> list;
+    private Country entity;
+    private CountryDAO dao;
+    private List<Country> list;
 
-    public CategoryBean() {
+    public CountryBean() {
     }
 
     public void create() {
-        this.getDao().createCategory(entity);
+        this.getDao().CountryDAO(entity);
     }
 
-    public void delete(Category c) {
+    public void delete(Country c) {
         this.getDao().delete(c);
     }
 
-    public Category getEntity() {
+    public Country getEntity() {
         if (this.entity == null) {
-            this.entity = new Category();//boş ise yeni bir satır oluşturur
+            this.entity = new Country();//boş ise yeni bir satır oluşturur
         }
         return entity;
     }
 
-    public void setEntity(Category entity) {
+    public void setEntity(Country entity) {
         this.entity = entity;
     }
 
-    public CatgoryDAO getDao() {
+    public CountryDAO getDao() {
         if (this.dao == null) {
-            this.dao = new CatgoryDAO();//boş ise yeni bir satır oluşturur
+            this.dao = new CountryDAO();//boş ise yeni bir satır oluşturur
         }
         return dao;
     }
 
-    public void setDao(CatgoryDAO dao) {
+    public void setDao(CountryDAO dao) {
         this.dao = dao;
     }
 
-    public List<Category> getList() {
+    public List<Country> getList() {
         this.list = this.getDao().getcategoryList();
         return list;
     }
 
-    public void setList(List<Category> list) {
+    public void setList(List<Country> list) {
         this.list = list;
     }
 

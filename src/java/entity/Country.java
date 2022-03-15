@@ -9,15 +9,15 @@ package entity;
  * @author husam
  */
 //country categoryleri yani sütunları tanımlama
-public class Category {
+public class Country {
 
     private String id;
     private String name;
 
-    public Category() {
+    public Country() {
     }
 
-    public Category(String id, String name) {
+    public Country(String id, String name) {
         this.id = id;
         this.name = name;
     }

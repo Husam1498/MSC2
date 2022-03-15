@@ -6,7 +6,7 @@ package dao;
 
 import java.sql.Connection;
 import util.DBConnection;
-import entity.Category;
+import entity.Country;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -18,11 +18,11 @@ import java.util.List;
  * @author husam
  */
 //COuntry ülkesi için KOMUTLAR
-public class CatgoryDAO extends DBConnection {
+public class CountryDAO extends DBConnection {
 
     private Connection db;
 
-    public void createCategory(Category c) {
+    public void CountryDAO(Country c) {
         try {
 
             Statement st = this.getDb().createStatement();
@@ -34,11 +34,11 @@ public class CatgoryDAO extends DBConnection {
 
     }
 
-    public void delete(Category c) {
+    public void delete(Country c) {
         try {
 
             Statement st = this.getDb().createStatement();
-            String query2 = "delete from country where country_id='"+ c.getId()+"'" ;
+            String query2 = "delete from country where country_id='" + c.getId() + "'";
             // System.out.println(query2);
             int r = st.executeUpdate(query2);
 
@@ -48,14 +48,14 @@ public class CatgoryDAO extends DBConnection {
         }
     }
 
-    public List<Category> getcategoryList() {
-        List<Category> categoryList = new ArrayList<>();
+    public List<Country> getcategoryList() {
+        List<Country> categoryList = new ArrayList<>();
         try {
             Statement st = this.getDb().createStatement();
             String query = "select * from country order by country_id";
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
-                categoryList.add(new Category(rs.getString("country_id"), rs.getString("name")));//country tablosuna id ve name sütunlarının verileri girildi
+                categoryList.add(new Country(rs.getString("country_id"), rs.getString("name")));//country tablosuna id ve name sütunlarının verileri girildi
             }
 
         } catch (Exception ex) {
