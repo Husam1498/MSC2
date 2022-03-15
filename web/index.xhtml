@@ -7,16 +7,26 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
+        
+        
+        bfjgfgj
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <h:form>
             Ulke id:<h:inputText value="#{countryBean.entity.id}"/>
             <br></br>
             Ulke isim:<h:inputText value="#{countryBean.entity.name}"/>
             <br></br>
             <h:commandButton action="#{countryBean.create}" value="Ekle"/>
-        </h:form>
-        <hr/>
+            <br></br> <br></br>
 
-        <h:form>
             <h:dataTable value="#{countryBean.list}" var="c" border="3">
                 <h:column>
                     <f:facet name="header">ID</f:facet>
@@ -32,6 +42,11 @@
                 </h:column>
 
             </h:dataTable>
+        </h:form>
+        <hr/>
+
+        <h:form>
+
 
         </h:form>
 
