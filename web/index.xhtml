@@ -5,9 +5,10 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
+        <link href="asest/css/bootstrap.css" type="text/css" rel="stylesheet"/>
     </h:head>
     <h:body>
-      
+
         <h:form>
             Ulke id:<h:inputText value="#{countryBean.entity.id}"/>
             <br></br>
@@ -35,8 +36,28 @@
         <hr/>
 
         <h:form>
+            <h:dataTable class="table" value="#{countryBean.list}" var="c" border="3">
+                <thead>
+                    <tr>
+                        
 
-
+                    </tr>
+                </thead>
+                <tbody>
+                    <h:column>
+                        <f:facet name="header">ID</f:facet>
+                            #{c.id}                                                           
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">NAME</f:facet>
+                            #{c.name}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">DELETE</f:facet>
+                        <h:commandButton action="#{countryBean.delete(c)}" value="Sil" />
+                    </h:column>
+                </tbody>
+            </h:dataTable>
         </h:form>
 
 
