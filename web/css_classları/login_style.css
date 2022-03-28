@@ -1,0 +1,47 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 2022 Mar 27, 05:58:16
+    Author     : husam
+*/
+
+
+
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-image: url(../images/gemi2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    height: 8vh;
+    width: 100%;
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: row; /*yani bunları bir satırda topla*/
+    justify-content: space-around;/*hem kenarlardan hemd birbirlerinden uzaklaşacakalar*/
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 0.8s
+}
+h2{
+    cursor: pointer;
+    transition: 0.8s;
+
+}
+a:hover{
+    color: yellow;
+}
+h2:hover{
+    color: orange;
+}

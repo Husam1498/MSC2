@@ -39,7 +39,7 @@
             </h:dataTable>
 
         </h:form>
-        
+
         <h:form>
             <strong>Personell tablosu tablosu</strong>
             <br></br>
@@ -66,7 +66,7 @@
 
             <h:commandButton action="#{employeeBean.create}" value="Ekle"/>
             <br></br> <br></br>
-            <h:dataTable class="table" value="#{employeeBean.list}" var="c" border="3">
+            <h:dataTable class=" table table-striped" value="#{employeeBean.list}" var="c" border="3">
                 <thead>
 
                 </thead>
@@ -120,7 +120,61 @@
             </h:dataTable>
 
         </h:form>
-   
+
+
+
+        <h:form>
+            <strong>Şirket tablosu</strong>
+            <br></br>
+            Company id:<h:inputText value="#{companyBean.entity.company_ID}"/>
+            <br></br>
+            Company name:<h:inputText value="#{companyBean.entity.company_Name}"/>
+            <br></br>
+            Type:<h:inputText value="#{companyBean.entity.company_type}"/>
+            <br></br>
+            Founder:<h:inputText value="#{companyBean.entity.founder}"/>
+            <br></br>
+            Year_of_Foundation:<h:inputText value="#{companyBean.entity.year_of_Foundation}"/>
+            <br></br>
+
+
+            <h:commandButton action="#{companyBean.create}" value="Ekle"/>
+            <br></br> <br></br>
+            <h:dataTable class=" table table-dark" value="#{companyBean.list}" var="c" border="3">
+                <thead>
+
+                </thead>
+                <tbody>
+                    <h:column>
+                        <f:facet name="header">Company_ID</f:facet>
+                            #{c.company_ID}                                                           
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Company_Name</f:facet>
+                            #{c.company_Name}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Company_Type</f:facet>
+                            #{c.company_type}                                                           
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Founder</f:facet>
+                            #{c.founder}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Year_of_Foundation</f:facet>
+                            #{c.year_of_Foundation}                                                           
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">DELETE</f:facet>
+                        <h:commandButton action="#{companyBean.delete(c)}" value="Sil" />
+                    </h:column>
+                </tbody>
+            </h:dataTable>
+
+        </h:form>
+
 
 
 
