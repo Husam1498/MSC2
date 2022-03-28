@@ -5,7 +5,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
-        <link href="asest/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+        
     </h:head>
     <h:body>
 
@@ -18,7 +18,7 @@
             <br></br>
             <h:commandButton action="#{countryBean.create}" value="Ekle"/>
             <br></br> <br></br>
-            <h:dataTable class="table" value="#{countryBean.list}" var="c" border="3">
+            <h:dataTable class="table table-striped" value="#{countryBean.list}" var="c" border="3">
                 <thead>
 
                 </thead>
@@ -140,7 +140,7 @@
 
             <h:commandButton action="#{companyBean.create}" value="Ekle"/>
             <br></br> <br></br>
-            <h:dataTable class=" table table-dark" value="#{companyBean.list}" var="c" border="3">
+            <h:dataTable class=" table table-striped" value="#{companyBean.list}" var="c" border="3">
                 <thead>
 
                 </thead>

@@ -38,8 +38,8 @@ public class LoginBean implements Serializable {
     public String validateUserLogin() {
         String navResult = "";
         System.out.println("Entered Username is= " + userName + ", password is" + password);//kullanıcının adını ve şifresini alır
-        if (userName.equalsIgnoreCase("javacodegeeks") && password.equals("access123")) {
-            navResult = "success";//şifre ve kullanıcı doğruysa success.xhtml sayfasına gönderir
+        if (userName.equalsIgnoreCase("admin") && password.equals("123")) {
+            navResult = "index";//şifre ve kullanıcı doğruysa success.xhtml sayfasına gönderir
         } else {
             navResult = "failure";//şifre ve kullanıcı yanlışsa failure.xhtml sayfasına gönderir
         }

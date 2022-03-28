@@ -1,0 +1,81 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 2022 Mar 24, 14:37:08
+    Author     : husam
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image:url(../images/gemi2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.login_form{
+    background-color: rgba(0,0,0,0.7);
+    min-width: 500px;
+    min-height: 290px;
+    color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+
+}
+h2{
+    text-transform: uppercase;
+}
+.tbox{
+    margin-top: 15px;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color:whitesmoke;
+    padding: 5px
+}
+.btn{
+    margin-top: 20px;
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    color:black;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+}
+.resetpasword{
+    margin-top: 20px;
+
+    font-size: 18px;
+    color:whitesmoke;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.resetpasword:hover{
+    background-color: transparent;
+
+    color: greenyellow;
+}
+
+
